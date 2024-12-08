@@ -41,5 +41,5 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: README.md
-          tag_name: env.TAG_NAME
-          prerelease: env.PRE_RELEASE
+          tag_name: ${{env.TAG_NAME}}
+          prerelease: ${{env.PRE_RELEASE}}
