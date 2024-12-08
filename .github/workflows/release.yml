@@ -1,0 +1,19 @@
+name: Build and Release
+
+# 触发规则
+on:
+  push:
+    branches:
+      - 'test' # 测试
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug
+        run: date >> README.md
+
+      - name: Upload release assets (zip files)
+        uses: softprops/action-gh-release@v2
+        with:
+          files: README.md
