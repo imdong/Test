@@ -40,6 +40,6 @@ jobs:
       - name: Upload release assets (zip files)
         uses: softprops/action-gh-release@v2
         with:
-          files: *.md
+          files: "*.md"
           tag_name: ${{env.TAG_NAME}}
           prerelease: ${{env.PRE_RELEASE}}
